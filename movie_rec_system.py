@@ -41,7 +41,7 @@ if st.button('Recommend'):
     st.subheader("Recommended Movies:")
     for movie_title in recommendations:
         # Generate clickable link to Google search with customized styling
-        google_search_url = f"https://www.google.com/search?q={movie_title.replace(' ', '+')}+'movie"
+        google_search_url = f"https://www.google.com/search?q={movie_title.replace(' ', '+')}+movie"
         st.markdown(f'<a href="{google_search_url}" target="_blank" style="text-decoration: none; color: #FFF; font-size: 16px;">{movie_title}</a>', unsafe_allow_html=True)
 
 # Footer
