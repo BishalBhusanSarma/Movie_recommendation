@@ -3,8 +3,8 @@ import pickle
 import pandas as pd
 
 # Load data
-movies_dict = pickle.load(open('/movie_dict.pkl', 'rb'))
-similarity = pickle.load(open('/similarity.pkl', 'rb'))
+movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
+similarity = pickle.load(open('similarity.pkl', 'rb'))
 moviess = pd.DataFrame(movies_dict)
 
 # Set page title and header
