@@ -1,10 +1,18 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import os
+import gdown
+
+file_id = '1TvfursAZgG8s0XkCRHYQ8DC3ivmABkVa'  # Replace with your actual file ID
+similarity = 'similarity.pkl'
+
+if not os.path.exists(similarity):
+    url = f'https://drive.google.com/uc?id={file_id}'
+    gdown.download(url, similarity, quiet=False)
 
 # Load data
 movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
-similarity = pickle.load(open('similarity.pkl', 'rb'))
 moviess = pd.DataFrame(movies_dict)
 
 # Set page title and header
